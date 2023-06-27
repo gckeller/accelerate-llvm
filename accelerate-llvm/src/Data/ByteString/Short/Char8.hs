@@ -21,7 +21,7 @@ module Data.ByteString.Short.Char8 (
 import Data.ByteString.Short                                        ( ShortByteString )
 import Prelude                                                      as P hiding ( takeWhile )
 import qualified Data.ByteString.Internal                           as BI
-import qualified Data.ByteString.Short                              as BS
+import qualified Data.ByteString.Short                              as BS hiding (takeWhile)
 import qualified Data.ByteString.Short.Extra                        as BS
 
 
