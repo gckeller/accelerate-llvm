@@ -29,7 +29,6 @@ import qualified Data.Map                                           as Map
 
 #if __GLASGOW_HASKELL__ >= 900
 import GHC.Plugins
-import GHC.Runtime.Linker
 #else
 import GhcPlugins
 import Linker
