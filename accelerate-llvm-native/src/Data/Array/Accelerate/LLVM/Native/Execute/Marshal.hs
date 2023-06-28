@@ -34,6 +34,6 @@ import qualified Foreign.LibFFI                                 as FFI
 instance Marshal Native where
   type ArgR Native = FFI.Arg
 
-  marshalInt = FFI.argInt64
+  marshalInt = FFI.argCInt
   marshalScalarData' _ = return . DL.singleton . FFI.argPtr . unsafeUniqueArrayPtr
 
