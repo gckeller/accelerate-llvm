@@ -83,7 +83,7 @@ pass guts = do
   --
   case backend dynFlags of
     NoBackend     -> return ()
-    Interpreter   ->  {-
+    {- Interpreter   -> 
       -- We are in interactive mode (ghci)
       --
       when (not (null paths)) . liftIO $ do
