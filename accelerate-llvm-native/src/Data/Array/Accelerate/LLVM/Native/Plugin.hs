@@ -83,7 +83,7 @@ pass guts = do
   --
   case backend dynFlags of
     NoBackend     -> return ()
-    Interpreter   ->
+    Interpreter   ->  {-
       -- We are in interactive mode (ghci)
       --
       when (not (null paths)) . liftIO $ do
@@ -92,7 +92,7 @@ pass guts = do
         --
         linkCmdLineLibs
                $ hscEnv { hsc_dflags = dynFlags { ldInputs = opts ++ objs }}
-
+   -}
     -- This case is not necessary for GHC-8.6 and above.
     --
     -- We are building to object code.
