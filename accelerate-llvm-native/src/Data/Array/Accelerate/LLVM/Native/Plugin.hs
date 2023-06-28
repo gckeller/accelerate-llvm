@@ -35,7 +35,7 @@ import Linker
 import SysTools
 #endif
 
-import GHC (hasTarget (..))
+import GHC (HasTarget (..))
 
 -- | This GHC plugin is required to support ahead-of-time compilation for the
 -- accelerate-llvm-native backend. In particular, it tells GHC about the
