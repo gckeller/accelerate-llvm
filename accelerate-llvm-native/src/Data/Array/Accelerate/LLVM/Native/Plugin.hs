@@ -35,7 +35,7 @@ import Linker
 import SysTools
 #endif
 
-import GHC (HscTarget (..))
+
 
 -- | This GHC plugin is required to support ahead-of-time compilation for the
 -- accelerate-llvm-native backend. In particular, it tells GHC about the
@@ -81,9 +81,9 @@ pass guts = do
 
   -- The linking method depends on the current build target
   --
-  case hscTarget dynFlags of
-    HscNothing     -> return ()
-    HscInterpreted ->
+  case backend dynFlags of
+    NoBackend     -> return ()
+    Interpreter   ->
       -- We are in interactive mode (ghci)
       --
       when (not (null paths)) . liftIO $ do
